@@ -1,0 +1,139 @@
+:root {
+    --cor-background:#4180ab;
+    --cor-conteiner:#8ab3cf;
+    --cor-focus: rgb(54, 222, 225);
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor-background);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px;
+    font-size: 2.5em;
+    font-weight: bolder;
+
+}
+
+p {
+    margin: 10px;
+
+}
+
+.text{
+    display: flex;
+}
+
+
+.conteiner {
+    background-color: var(--cor-conteiner);
+    width: 600px;
+    height: 100%;
+    margin: 30px auto;
+    padding: 10px;
+
+    border: solid black 1px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+.formulario {
+    width: 90%;
+    height: 330px;
+    margin: 10px;
+    border: solid black 1px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.492);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    font-weight: bold;
+    color: #000000;
+    background-color: #f8f8fd;
+    padding: 0.8em 2.2em;
+    border-radius: 50em;
+    border: 6px solid #bdd1de;
+    box-shadow: 0px 8px 4px #4181ab7b;
+
+
+    padding: 5px;
+    margin: 10px;
+    width: 70%;
+    height: 45px;
+
+}
+
+input:focus {
+    outline: 2px solid rgb(54, 222, 225);
+}
+
+button {
+    margin: 10px;
+    width: 150px;
+    cursor: pointer;
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    color: #2b648a;
+    background-color: #f8f8fd;
+    padding: 0.8em 2.2em;
+    border-radius: 50em;
+    border: 6px solid #bdd1de;
+    box-shadow: 0px 8px #4181ab93;
+}
+
+ button:active {
+    position: relative;
+    top: 8px;
+    border: 6px solid #ff34019e;
+    box-shadow: 0px 0px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 520px;
+    margin: 20px 0;
+    background-color: #f8f8fd;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: #7ac37c;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
