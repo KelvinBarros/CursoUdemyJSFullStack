@@ -51,12 +51,16 @@
 
         <form action="" class="formulario">
             <label for="input-teste1"><strong>Peso:</strong></label>
-            <input type="number" id="peso" placeholder="Digite aqui...">
+            <input type="number" id="peso" placeholder="Peso em Kg...">
 
             <label for="input-teste2"><strong>Altura:</strong></label>
-            <input type="number" id="altura" placeholder="Digite  aqui...">
+            <input type="number" id="altura" placeholder="Modelo: 0,00">
 
-            <button type="submit" onclick="calcular(event)">Enviar</button>
+            <div>
+                <button type="submit" onclick="calcular(event)">Enviar</button>
+                <button type="button" class="reset" onclick="resetForm()">Limpar</button>
+            </div>
+
 
             <div class="result"><p>
                 

@@ -1,6 +1,6 @@
 :root {
-    --cor-background:#4180ab;
-    --cor-conteiner:#8ab3cf;
+    --cor-background: #025951;
+    --cor-conteiner: #0cf25dca;
     --cor-focus: rgb(54, 222, 225);
 }
 
@@ -27,13 +27,8 @@ h1 {
 
 }
 
-p {
-    margin: 10px;
-
-}
-
-.text{
-    display: flex;
+.text {
+    display: flex
 }
 
 
@@ -53,13 +48,13 @@ p {
     flex-direction: column;
 }
 
-label{
+label {
     font-size: 1.5em;
 }
 
 .formulario {
     width: 90%;
-    height: 330px;
+    height: 320px;
     margin: 10px;
     border: solid black 1px;
     border-radius: 10px;
@@ -78,8 +73,8 @@ input {
     background-color: #f8f8fd;
     padding: 0.8em 2.2em;
     border-radius: 50em;
-    border: 6px solid #bdd1de;
-    box-shadow: 0px 8px 4px #4181ab7b;
+    border: 5px solid #85d08e;
+    box-shadow: 0px 8px 4px #0000007b;
 
 
     padding: 5px;
@@ -100,40 +95,81 @@ button {
     font-size: large;
     font-family: inherit;
     font-weight: bold;
-    color: #2b648a;
+    color: #000000;
     background-color: #f8f8fd;
-    padding: 0.8em 2.2em;
+    padding: 0.4em 2.2em;
     border-radius: 50em;
-    border: 6px solid #bdd1de;
-    box-shadow: 0px 8px #4181ab93;
+    border: 6px solid #85d08e;
+    box-shadow: 0px 8px 2px #00000093;
 }
 
- button:active {
+button:active {
     position: relative;
     top: 8px;
     border: 6px solid #ff34019e;
     box-shadow: 0px 0px;
 }
 
+.reset {
+    margin: 10px;
+    width: 120px;
+    cursor: pointer;
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    color: #000000;
+    background-color: #f8f8fd;
+    padding: 0.4em 1.2em;
+    border-radius: 50em;
+    border: 6px solid #85d08e;
+    box-shadow: 0px 8px 2px #00000093;
+}
 
 table {
     border-collapse: collapse;
     width: 520px;
     margin: 20px 0;
     background-color: #f8f8fd;
+
 }
-th, td {
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 5px;
     text-align: center;
 }
+
 th {
-    background-color: #7ac37c;
+    background-color: #02735E;
     color: white;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 tr:hover {
     background-color: #ddd;
+}
+
+
+
+.result {
+
+    color: wheat;
+    width: 100%;
+    height: 25px;
+    padding: 3px;
+    margin: 10px;
+
+    text-align: center;
+}
+
+.error {
+    background-color: rgb(212, 0, 0);
+}
+
+.success {
+    background-color: #02735E;
 }
