@@ -33,7 +33,7 @@ p {
 }
 
 
-.conteiner {
+.container {
     background-color: var(--cor-conteiner);
     width: 600px;
     height: 100%;
