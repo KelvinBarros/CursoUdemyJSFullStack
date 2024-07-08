@@ -4,6 +4,13 @@ function mostraHora (){
     return data.toLocaleTimeString();
 }
 
-function funcaoDoInteval (){
-    console.log(mostraHora)
-}
+
+
+const timer = setInterval(function(){
+    console.log(mostraHora());
+},1000 )
+
+setTimeout(function(){
+    clearInterval(timer);
+
+},5000);
