@@ -1,30 +1,8 @@
-//buscar elementos DOM
+const tarefa = document.querySelector('#tarefa');
 
-const tarefas = document.querySelector('.tarefas');
-
-//adicionar evento click ao botão
-
-
-//adicionar tarefa do input ao lista
-
-function adicionarTarefa() {
-    const inputTarefa = document.querySelector('.inputTarefa');
-    const tarefaTexto = inputTarefa.value;
-
-    if (tarefaTexto.trim() === '') {
-        alert('Digite uma tarefa válida');
-        return;
-    }
-
-    const tarefaElemento = document.createElement('li');
-    tarefaElemento.textContent = tarefaTexto;
-
-    tarefas.appendChild(tarefaElemento);
-
-    inputTarefa.value = '';
+function adicionar(){
+    const item = document.createElement('li');
+    item.textContent = tarefa.value;
+    document.querySelector('#listTarefa').appendChild(item);
+    tarefa.value = '';
 }
-
-
-
-const botaoAdicionar = document.querySelector('.adicionarTarefa');
-botaoAdicionar.addEventListener('click', adicionarTarefa);
