@@ -1,6 +1,6 @@
 :root {
-    --cor-background:#4180ab;
-    --cor-conteiner:#ffffff;
+    --cor-background: #4180ab;
+    --cor-conteiner: #ffffff;
     --cor-focus: rgb(54, 222, 225);
 }
 
@@ -54,14 +54,14 @@ input {
     color: #173f5a;
     background-color: #f8f8fd;
     padding: 0.8em 2.2em;
-    border-radius: 50em;
-    border:4px solid #4180ab;
-  
+    border-radius: 1em;
+    border: 2px solid #4180ab;
+
 
 
     padding: 5px;
-    margin: 10px;
-    width: 70%;
+    margin: 5px;
+    width: 90%;
     height: 45px;
 
 }
@@ -71,33 +71,42 @@ input:focus {
 }
 
 button {
-    margin: 10px;
+    height: 30px;
+    margin: 5px;
     cursor: pointer;
-    font-size: large;
+    font-size: 1em;
     font-family: inherit;
     font-weight: bold;
     color: #2b648a;
     background-color: #f8f8fd;
-    padding: 0.5em 2.2em;
-    border-radius: 50em;
-    border: 4px solid #4180ab;
-    
+    padding: 0.5em 1.5em;
+    border-radius: 1em;
+    border: 1px solid #4180ab;
+
 }
 
- button:active {
+button:active {
     position: relative;
     top: 3px;
-    border: 4px solid #ff3401ce;
+    border: 1px solid #12ff01ce;
     box-shadow: 0px 0px;
 }
 
-ul{
+ul {
     margin: 10px;
-    padding: 10px
+    
     
 }
 
-li{
+li {
     margin: 10px;
     font-size: 1.1em;
+}
+
+ul button {
+    height: 17px;
+    width: 50px;
+    padding: 0px;
+    margin: 5px;
+    font-size: 0.5em;
 }
