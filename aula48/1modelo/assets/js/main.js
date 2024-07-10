@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', carregarTarefas);
 
 function adicionar() {
     
@@ -15,6 +14,7 @@ function adicionar() {
     item.textContent = tarefa;
     document.querySelector('.listTarefa').appendChild(item);
     inputTarefa.value = '';
+    inputTarefa.focus();
  
 
     // criar botão do lado do li
@@ -35,3 +35,6 @@ document.querySelector('#inputTarefa').addEventListener('keyup', function (event
     }
 });
 
+function limpar(){
+    document.querySelector('.listTarefa').innerHTML = '';
+}

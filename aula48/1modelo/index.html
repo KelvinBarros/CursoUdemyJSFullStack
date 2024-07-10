@@ -11,14 +11,16 @@
 <body>
     <section class="conteiner">
         <h1>Lista de tarefas</h1>
+        <input type="text" id="inputTarefa" placeholder="Descrição da tarefa..." required>
+
         <div class="tarefas">
             
-            <input type="text" id="inputTarefa" placeholder="Descrição da tarefa..." required>
             <button id="btnAdicionar" onclick="adicionar()">Adicionar a lista</button>
+            <button id="btnLimpar" onclick="limpar()">Limpar tudo</button>
             <br><br>
-            <ul class="listTarefa"></ul>
             
         </div>
+        <ul class="listTarefa"></ul>
     </section>
 
 
