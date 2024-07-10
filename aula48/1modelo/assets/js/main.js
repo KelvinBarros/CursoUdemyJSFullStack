@@ -15,6 +15,7 @@ function adicionar() {
     document.querySelector('.listTarefa').appendChild(item);
     inputTarefa.value = '';
     inputTarefa.focus();
+    salvarTarefas() 
  
 
     // criar botão do lado do li
@@ -37,4 +38,11 @@ document.querySelector('#inputTarefa').addEventListener('keyup', function (event
 
 function limpar(){
     document.querySelector('.listTarefa').innerHTML = '';
+}
+
+//salvar no local storage
+
+function salvarTarefas() {
+    const tarefas = Array.from(document.querySelectorAll('.listTarefa li')).map(li => li.textContent);
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
 }
