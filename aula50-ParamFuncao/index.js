@@ -1,9 +1,19 @@
 //PARAMETROS DE FUNÇÃO
 //podemos ou não enviar o parametro para executar a função...
-//... isso só funciona com função declarada com a palavra Function
+//... isso só funciona com função declarada com a palavra 'Function'
 
-function funcao(){
-    console.log('executado');
+function arg(){
+    let total = 0;
+    for (let argumentos of arguments){
+        total += argumentos;
+    }
+    console.log(total);
 }
-// argumentos são os valores enviadas para os parametros
-funcao('valor' );
+
+arg(1,2,3,4,5,6,7);// argumentos: são os valores enviadas para os parametros
+
+function funcao (a, b=0, c=2){
+    
+    console.log(a + b + c);
+}
+funcao(1)
