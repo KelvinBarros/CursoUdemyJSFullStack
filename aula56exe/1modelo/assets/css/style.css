@@ -54,11 +54,12 @@ p {
     border: none;
     background-color: #d5d5d5;
     box-sizing: border-box;
+    cursor: pointer;
 
 }
 
 .calculator button:hover {
-    background-color: #bbbbbb;
+    background-color: #ababab;
 }
 
 
