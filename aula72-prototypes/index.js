@@ -1,3 +1,8 @@
+// Prototipo é o termo usado para se referir ao que foi criado pela primeira vez
+//, servindo de modelo ou molde para futuras produções
+
+
+
 // construtora -> molde (classe)
 
 function Pessoa(nome, sobrenome){
