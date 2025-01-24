@@ -36,7 +36,7 @@
 }
 
 // Exemplo de uso:
-const cpf = '705.484.450-52';
+const cpf = '175.213.697-78';
 if (validarCPF(cpf)) {
     console.log(`'O CPF ${cpf} é valido!`);
 } else {
