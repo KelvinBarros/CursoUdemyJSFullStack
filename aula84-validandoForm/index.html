@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="" method="post" class="formulario">
+        <h1>Formulário de Cadastro</h1>
+        <ul>
+            <li>Preencha os campos abaixo para se cadastrar</li>
+            <li>Usuário só pode contet letras e numeros</li>
+            <li>Usuário deve ter entre 3 e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 a 12 caracteres</li>
+        </ul>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" class="nome validar" > <br>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" class="sobrenome validar" > <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" class="cpf validar" > <br>
+
+        <label for="usuario">Usuário:</label>
+        <input type="text" name="usuario" class="usuario validar" > <br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" class="senha validar" > <br>
+
+        <label for="confirmarSenha">Confirmar Senha:</label>
+        <input type="password" name="confirmarSenha" class="confirmarSenha validar" > <br>
+
+
+
+        <button type="submit">
+            <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor"
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <span>Enviar</span>
+        </button>
+    </form>
+    <script src="script.js"></script>
+    <script src="validacpf.js"></script>
+</body>
+
+</html>
