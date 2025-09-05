@@ -13,64 +13,91 @@ class ValidarFormulario {
     handleSubmit(e) {
         e.preventDefault();
         const camposValidos = this.camposSaoValidos();
+        const senhasValidas = this.senhasSaoValidas();
+
+        if(camposValidos && senhasValidas){
+            alert('formulario enviado');
+            this.formulario.submit();
+        }
     }
 
-    camposSaoValidos() {
-        let valid = true
+    senhasSaoValidas() {
+        let valid = true;
 
-        for (let errorText of this.formulario.querySelectorAll('.error-text')) {
-            errorText.remove();
+        const senha = this.formulario.querySelector('.senha');
+        const confirmarSenha = this.formulario.querySelector('.confirmarSenha');
+
+        if (senha.value !== confirmarSenha.value) {
+            valid = false
+            this.criaErro(senha, 'Campos de senha e confirmar senha devem ser iguais!');
+            this.criaErro(confirmarSenha, 'Campos de senha e confirmar senha devem ser iguais!');
         }
 
-        for (let campo of this.formulario.querySelectorAll('.validar')) {
-            const label = campo.previousElementSibling.innerHTML.slice(0, -1);
-            if (!campo.value) {
-                this.criaErro(campo, `Campo ${label} está vazio`);
-                valid = false
-            }
-
-            if (campo.classList.contains('cpf')) {
-                if (!this.validaCPF(campo)) valid = false;
-            }
-
-            if (campo.classList.contains('usuario')) {
-                if (!this.validaUsuario(campo)) valid = false;
-            }
+        if(senha.value.length < 6 || senha.length > 12){
+            valid = false
+            this.criaErro(senha, 'Senha deve ter entre 6 e 12 caracteres')
         }
 
+        return valid;
+    
+}
+
+camposSaoValidos() {
+    let valid = true
+
+    for (let errorText of this.formulario.querySelectorAll('.error-text')) {
+        errorText.remove();
     }
 
-    validaCPF(campo) {
-        const cpf = new ValidaCPF(campo.value);
-        if (!cpf.valida()) {
-            this.criaErro(campo, 'CPF invalido');
-            return false;
-        }
-        return true
-    }
-
-    validaUsuario(campo) {
-        const usuario = campo.value;
-        let valid = true
-        if (usuario.length > 12 || usuario.length < 3) {
-            this.criaErro(campo, 'Usuário deve ter entre 3 e 12 caracteres');
-            valid = false;
+    for (let campo of this.formulario.querySelectorAll('.validar')) {
+        const label = campo.previousElementSibling.innerHTML.slice(0, -1);
+        if (!campo.value) {
+            this.criaErro(campo, `Campo ${label} está vazio!`);
+            valid = false
         }
 
-        if (!usuario.match(/[a-zA-Z0-9]+$/g)) {
-            this.criaErro(campo, 'Usuário deve ter apenas letras e/ou numeros');
-            valid = false;
+        if (campo.classList.contains('cpf')) {
+            if (!this.validaCPF(campo)) valid = false;
         }
 
-        return true
+        if (campo.classList.contains('usuario')) {
+            if (!this.validaUsuario(campo)) valid = false;
+        }
+    }
+    return valid;
+}
+
+validaCPF(campo) {
+    const cpf = new ValidaCPF(campo.value);
+    if (!cpf.valida()) {
+        this.criaErro(campo, 'CPF invalido!');
+        return false;
+    }
+    return true
+}
+
+validaUsuario(campo) {
+    const usuario = campo.value;
+    let valid = true
+    if (usuario.length > 12 || usuario.length < 3) {
+        this.criaErro(campo, 'Usuário deve ter entre 3 e 12 caracteres!');
+        valid = false;
     }
 
-    criaErro(campo, mensagem) {
-        const div = document.createElement('div');
-        div.innerHTML = mensagem;
-        div.classList.add('error-text');
-        campo.insertAdjacentElement('afterend', div)
+    if (!usuario.match(/[a-zA-Z0-9]+$/g)) {
+        this.criaErro(campo, 'Usuário deve ter apenas letras e/ou numeros!');
+        valid = false;
     }
+
+    return true
+}
+
+criaErro(campo, mensagem) {
+    const div = document.createElement('div');
+    div.innerHTML = mensagem;
+    div.classList.add('error-text');
+    campo.insertAdjacentElement('afterend', div)
+}
 }
 
 const valida = new ValidarFormulario();

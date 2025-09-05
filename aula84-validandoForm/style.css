@@ -36,19 +36,21 @@ form {
 
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5x;
     font-weight: bold;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .error-text{
+    margin: 0px;
+    padding: 0px;
     font-size: 0.6em;
     color: red;
 }
