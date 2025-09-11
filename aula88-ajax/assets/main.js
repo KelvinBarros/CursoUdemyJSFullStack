@@ -27,21 +27,24 @@ document.addEventListener('click', e => {
 function carregaPagina(el) {
     const href = el.getAttribute('href');
     console.log(href);
-
-    request({
+    const objConfig = {
         method: 'GET',
         url: href,
-        success(response){
+        success(response) {
             carregaResultado(response)
         },
 
-        error(errorText){
+        error(errorText) {
             console.log('errorText')
         }
-    })
+    }
+
+
+
+    request()
 }
 
-function carregaResultado(response){
+function carregaResultado(response) {
     const resultado = document.querySelector('.resultado');
     resultado.innerHTML = response;
 }
